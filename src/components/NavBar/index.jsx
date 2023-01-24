@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { HiShoppingCart } from "react-icons/hi";
+import './styles.css';
+import logoNegro from '../../assets/logo/logoNegro.png';
 
 const NavBar = () => {
+
+  const [contadorCarrito, setContadorCarrito] = useState(0);
+
+  let carrito = () => {
+    setContadorCarrito(contadorCarrito + 1);
+  }
+
   return (
-  <nav class="navbar navbar-expand-lg bg-light">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="/#"><img src="https://o.remove.bg/downloads/b017f53e-eeb8-46e4-851d-4d16e628d635/logorain-removebg-preview.png" alt="Bootstrap" width="180" height="120"/></a>
+  <nav className="navbar navbar-expand-lg">
+  <div className='nav-sale'>
+    <h6>¡Envío grátis a todo el país y 6 cuotas sin interés!</h6>
+  </div>
+  <div className="container-fluid nav-pages">
+    <a className="navbar-brand" href="/#"><img src={logoNegro} alt="Supernova Logo" width="210" height="40"/></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <div className="collapse navbar-collapse nav-pages" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/#">Inicio</a>
+          <a className="nav-link" aria-current="page" href="/#">Inicio</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/#">Productos</a>
@@ -21,13 +33,14 @@ const NavBar = () => {
           <a className="nav-link" href="/#">Nuevo</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link">Proximamente</a>
+          <a className="nav-link" href="/#">Oferta</a>
         </li>
       </ul>
     </div>
-  </div>
   <HiShoppingCart style={{height: 40, width: 40}}/>
-  <span>5</span>
+  <span>{contadorCarrito}</span>
+  <button onClick={carrito}>Agregar producto</button>
+  </div>
   </nav>
   )
 }

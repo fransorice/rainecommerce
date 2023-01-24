@@ -1,0 +1,36 @@
+.footer {
+    height: 220px;
+    background: #6de017;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-pages h5 {
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.footer-pages ul {
+    list-style: none;
+}
+
+.footer-pages ul a {
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.3s;
+    font-size: 17px;
+}
+
+.footer-pages ul a:hover {
+    color: #65bd23;
+    font-size: 19px;
+}

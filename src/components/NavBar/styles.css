@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+}
+
+.nav-sale {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.nav-sale h6 {
+    color: #6de017;
+}
+
+.nav-pages { 
+    background-color: #6de017;
+    height: 100px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-pages {
+    margin-right: 100px;
+}
+
+.navbar-collapse ul li{
+    padding: 0px 12px;
+    margin: 0 20px;
+}
+
+.navbar-collapse ul li a {
+    font-size: 17px;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.navbar-collapse ul li a svg {
+    transition-duration: 0.2s;
+}
+
+

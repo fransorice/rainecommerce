@@ -1,0 +1,19 @@
+.nav-categories {
+    height: 60px;
+    width: 100%;
+    background-color: #65bd23;
+}
+
+.nav-categories-div ul li a:hover {
+    fill: #6de017;
+    color: #6de017;
+}
+
+.nav-categories-div {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link-noteandpc {
+    padding: 12px !important;
+}
