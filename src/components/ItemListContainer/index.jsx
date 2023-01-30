@@ -11,6 +11,8 @@ const ItemListContainer = ({greeting}) => {
   //Lo primero es capturar la categoría que quiero filtrar
   const {categoryId}  = useParams()
 
+  console.log({categoryId});
+
   //Este effect se ejecuta cuando se monta el componente
   useEffect(()=> {
 

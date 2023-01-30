@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HiShoppingCart } from "react-icons/hi";
 import './styles.css';
 import logoNegro from '../../assets/logo/logoNegro.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -17,7 +18,7 @@ const NavBar = () => {
     <h6>¡Envío grátis a todo el país y 6 cuotas sin interés!</h6>
   </div>
   <div className="container-fluid nav-pages">
-    <a className="navbar-brand" href="/#"><img src={logoNegro} alt="Supernova Logo" width="210" height="40"/></a>
+    <Link className="navbar-brand" to="/"><img src={logoNegro} alt="Supernova Logo" width="210" height="40"/></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +38,7 @@ const NavBar = () => {
         </li>
       </ul>
     </div>
-  <HiShoppingCart style={{height: 40, width: 40}}/>
+  {<HiShoppingCart style={{height: 40, width: 40}}/>}
   <span>{contadorCarrito}</span>
   <button onClick={carrito}>Agregar producto</button>
   </div>
