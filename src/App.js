@@ -7,6 +7,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer';
 import ItemList from './components/ItemList';
+import Banner from './components/Banner';
 
 function App() {
   return (
@@ -15,12 +16,11 @@ function App() {
         <NavBar/>
         <NavBarSections/>
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/' element={<><Banner/><ItemListContainer/></>}/> 
           <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
           <Route path='*' element={<h2>Ruta no encontrada pa</h2>}/>
-          <Route path='/detail/:id' element={<ItemList/>}/>        
+          <Route path='/detail/:id' element={<ItemList/>}/> 
         </Routes>
-        {/* <ItemListContainer/> */}
         <Footer/>
       </BrowserRouter>
     </div>
