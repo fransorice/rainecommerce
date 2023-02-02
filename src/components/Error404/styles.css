@@ -1,0 +1,11 @@
+.error-message {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.error-message h2 {
+    color: red;
+    margin-top: 60px;
+}

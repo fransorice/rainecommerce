@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import ItemList from '../../components/ItemList';
-import { db } from '../../firebase/config';
+import ItemList from '../../ItemList';
+import { db } from '../../../firebase/config';
 import { collection, getDocs, query, where } from "firebase/firestore";
+import Ad from '../../Ad';
 
 const ItemListContainer = ({greeting}) => {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
+  const [adVisibility, setAdVisibility] = useState(true);
 
   //Lo primero es capturar la categoría que quiero filtrar
-  const {categoryId}  = useParams()
+  const {categoryId}  = useParams();
 
-  console.log({categoryId});
 
   //Este effect se ejecuta cuando se monta el componente
   useEffect(()=> {
@@ -38,8 +39,34 @@ const ItemListContainer = ({greeting}) => {
     getProducts();
   }, [categoryId])
 
+  const handleCloseAd = () => {
+    setAdVisibility(false);
+  }
+
   return (
-    <ItemList productos={products}/>
+    <div>
+      <ItemList productos={products}/>
+      {
+        adVisibility === true
+        ?
+        <Ad>
+          <h3>Envío gratis y 6 cuotas sin interés en productos seleccionados</h3>
+          <button
+            style={{
+              width: 0,
+              padding: 8,
+              border: 'none',
+              background: 'none',
+              marginTop: 50,
+              fontSize: '20px' 
+            }}
+            onClick = {handleCloseAd}
+          >X</button>
+        </Ad>
+        :
+        null
+      }
+    </div>
   )
 }
 
