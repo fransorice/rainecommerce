@@ -17,12 +17,11 @@ function App() {
     <div className="App">
       <ShopProvider>
         <BrowserRouter>
-            <NavBar />
             <Routes>
-              <Route path='/' element={<ItemListContainer/>}/>
-              <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-              <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
-              <Route path='*' element={<h2>Ruta no encontrada</h2>}/>
+              <Route path='/' element={<><NavBar/><NavBarSections/><ItemListContainer/><Footer/></>}/>
+              <Route path='/category/:categoryId' element={<><NavBar/><NavBarSections/><ItemListContainer/><Footer/></>}/>
+              <Route path='/detail/:id' element={<><NavBar/><ItemDetailContainer/><Footer/></>}/>
+              <Route path='*' element={<Error404/>}/>
             </Routes>
         </BrowserRouter>
       </ShopProvider>

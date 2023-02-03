@@ -11,12 +11,10 @@ const ItemDetail = ({ detail }) => {
     const {addProduct} = useContext(Shop)
 
     const onAdd = (cantidad) => {
-        console.log(`Se agregó una cantidad de productos: ${cantidad}`)
         setQuantity(cantidad)
         addProduct({...detail, quantity: cantidad})
     }
 
-    console.log(detail.titulo);
     return (
         <div className="detail-container">
             <img className="detail-img" src={detail.img} alt="detail" />

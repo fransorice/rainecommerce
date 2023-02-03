@@ -3,6 +3,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import './styles.css';
 import logoNegro from '../../assets/logo/logoNegro.png';
 import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget';
 
 const NavBar = () => {
 
@@ -30,10 +31,11 @@ const NavBar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/oferta">Oferta</Link>
         </li>
+        <div className="widget-container">
+          <CartWidget/>
+        </div>
       </ul>
     </div>
-  {<HiShoppingCart style={{height: 40, width: 40}}/>}
-  <span>10</span>
   </div>
   </nav>
   )

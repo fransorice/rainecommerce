@@ -11,8 +11,6 @@ const ShopProvider = ({children}) => {
     const addProduct = (product) => {
         const isInCart = isProductInCart(product.id);
         if (isInCart) {
-            //Hacer algo
-            //Primero vamos a encontra el producto repetido
             const productoRepetido = products.find(element => element.id === product.id)
             productoRepetido.quantity += product.quantity
             setProducts([...products])
