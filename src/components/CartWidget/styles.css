@@ -1,0 +1,28 @@
+.cart-widget-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.cart-widget-container svg {
+    width: 30px;
+    transition-duration: 0.3s;
+}
+
+.cart-widget-container svg:hover {
+    width: 35px;
+    fill: #65bd23;
+}
+
+.cart-widget-container span {
+    font-size: 20px;
+    transition-duration: 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
+.cart-widget-container span:hover {
+    font-size: 25px;
+    color: #65bd23;
+    text-decoration: none;
+}

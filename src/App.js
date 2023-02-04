@@ -11,6 +11,7 @@ import Banner from './components/Banner';
 import Error404 from './components/Error404';
 import ItemDetailContainer from './components/containers/ItemDetailContainer';
 import ShopProvider from './context/ShopProvider';
+import Cart from './components/containers/CartContainer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path='/' element={<><NavBar/><NavBarSections/><ItemListContainer/><Footer/></>}/>
               <Route path='/category/:categoryId' element={<><NavBar/><NavBarSections/><ItemListContainer/><Footer/></>}/>
               <Route path='/detail/:id' element={<><NavBar/><ItemDetailContainer/><Footer/></>}/>
+              <Route path='/cart' element={<><NavBar/><Cart/><Footer/></>}/>
               <Route path='*' element={<Error404/>}/>
             </Routes>
         </BrowserRouter>

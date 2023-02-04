@@ -36,7 +36,7 @@ const ItemDetailContainer = () => {
     <div>
         {
           Object.keys(detail).length === 0 
-            ? <h2>Loading ...</h2>
+            ? <h2>Cargando...</h2>
             : <ItemDetail detail={detail}/>
         }
     </div>

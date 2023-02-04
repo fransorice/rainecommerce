@@ -4,6 +4,7 @@ import ItemList from '../../ItemList';
 import { db } from '../../../firebase/config';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import Ad from '../../Ad';
+import './styles.css';
 
 const ItemListContainer = ({greeting}) => {
 
